@@ -13,7 +13,9 @@
   },
   "author": "Joshua Kagenyi",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1"
+  },
   "devDependencies": {
     "babel-cli": "6.8.0",
     "babel-core": "6.8.0",
