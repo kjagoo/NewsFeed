@@ -10,6 +10,7 @@ import { loadNews } from './actions/newsActions';
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+
 const store = configureStore();
 store.dispatch(loadAuthors());
 store.dispatch(loadNews());

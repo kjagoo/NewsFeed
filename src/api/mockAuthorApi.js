@@ -14,23 +14,7 @@ let allIn =[];
 // if (News.Promise[0] = "resolved") {
 
 // }
-const authors = [
-    {
-        id: 'cory-house',
-        firstName: 'Cory',
-        lastName: 'House'
-    },
-    {
-        id: 'scott-allen',
-        firstName: 'Scott',
-        lastName: 'Allen'
-    },
-    {
-        id: 'dan-wahlin',
-        firstName: 'Dan',
-        lastName: 'Wahlin'
-    }
-];
+const authors = [];
 
 //This would be performed on the server in a real app. Just stubbing in.
 const generateId = (author) => {
