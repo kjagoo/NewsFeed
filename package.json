@@ -9,12 +9,29 @@
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "build:html": "babel-node tools/buildHtml.js",
+    "prebuild": "npm-run-all clean-dist test lint build:html",
+    "build": "babel-node tools/build.js",
+    "postbuild": "babel-node tools/distServer.js"
   },
   "author": "Joshua Kagenyi",
   "license": "MIT",
   "dependencies": {
-    "extract-text-webpack-plugin": "^1.0.1"
+    "extract-text-webpack-plugin": "^1.0.1",
+    "babel-polyfill": "6.7.4",
+    "bootsrap": "3.3.6",
+    "jquery": "2.2.3",
+    "react": "15.0.1",
+    "react-dom": "15.0.1",
+    "react-redux": "4.4.5",
+    "react-router": "2.2.2",
+    "react-router-redux":"4.0.2",
+    "redux": "3.4.0",
+    "redux-thunk": "2.0.1",
+    "toastr":"2.1.4"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",
